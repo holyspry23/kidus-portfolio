@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kude | Full-Stack Developer & Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Kidus Nega</h1>
+      <p>A Full-Stack Developer & Tigrinya Translator</p>
+      <a href="contact.html" class="btn">Hire Me</a>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>Welcome to My Portfolio</h2>
+    <p>I design and develop mobile apps, websites, and offer expert translation services. My work is driven by passion, precision, and purpose. Explore my work and let's create something amazing together!</p>
+    
+    <div class="grid-container">
+      <div class="card">
+        <h3>🚀 Web Development</h3>
+        <p>Modern, responsive websites with cutting-edge technologies</p>
+        <button class="btn" onclick="showDetails('web')">Learn More</button>
+      </div>
+      
+      <div class="card">
+        <h3>📱 Mobile Apps</h3>
+        <p>Native and cross-platform mobile applications</p>
+        <button class="btn" onclick="showDetails('mobile')">Learn More</button>
+      </div>
+      
+      <div class="card">
+        <h3>🌍 Translation</h3>
+        <p>Professional Tigrinya translation services</p>
+        <button class="btn" onclick="showDetails('translation')">Learn More</button>
+      </div>
+    </div>
+    
+    <div id="details-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Kidus Nega | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

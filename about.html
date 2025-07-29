@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Kidus Nega | Full-Stack Developer & Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li> 
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>About Me</h1>
+      <p>Passionate Full-Stack Developer & Tigrinya Translator</p>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>My Story</h2>
+    <p>I'm Kidus Nega, a dedicated full-stack developer with a passion for creating innovative digital solutions. With expertise in both development and translation, I bridge the gap between technology and language to deliver exceptional user experiences.</p>
+    
+    <h3>Skills & Expertise</h3>
+    <ul style="text-align: left; max-width: 600px; margin: 20px auto;">
+      <li>Full-Stack Web Development</li>
+      <li>Mobile App Development</li>
+      <li>Tigrinya Translation Services</li>
+      <li>UI/UX Design</li>
+      <li>Database Management</li>
+      <li>API Development</li>
+    </ul>
+    
+    <div class="grid-container">
+      <div class="card">
+        <h3>🎯 Experience</h3>
+        <p>5+ years of professional development experience</p>
+        <button class="btn" onclick="showDetails('experience')">View Details</button>
+      </div>
+      
+      <div class="card">
+        <h3>🎓 Education</h3>
+        <p>Computer Science degree with focus on software engineering</p>
+        <button class="btn" onclick="showDetails('education')">View Details</button>
+      </div>
+      
+      <div class="card">
+        <h3>🏆 Achievements</h3>
+        <p>Multiple successful projects and client testimonials</p>
+        <button class="btn" onclick="showDetails('achievements')">View Details</button>
+      </div>
+    </div>
+    
+    <div id="details-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Kidus Nega | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html> 

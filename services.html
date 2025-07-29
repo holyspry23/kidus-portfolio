@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Kidus Nega | Full-Stack Developer & Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>My Services</h1>
+      <p>Comprehensive Solutions for Your Digital Needs</p>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>What I Offer</h2>
+    <div class="grid-container">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Custom websites and web applications built with modern technologies and best practices.</p>
+        <ul style="margin-top: 15px; color: #ffffff;">
+          <li style="margin-bottom: 8px;">Responsive Design</li>
+          <li style="margin-bottom: 8px;">E-commerce Solutions</li>
+          <li style="margin-bottom: 8px;">Content Management Systems</li>
+          <li style="margin-bottom: 8px;">API Development</li>
+        </ul>
+        <button class="btn" onclick="showServiceDetails('web')">Learn More</button>
+      </div>
+      
+      <div class="card">
+        <h3>Mobile App Development</h3>
+        <p>Native and cross-platform mobile applications for iOS and Android platforms.</p>
+        <ul style="margin-top: 15px; color: #ffffff;">
+          <li style="margin-bottom: 8px;">iOS Development</li>
+          <li style="margin-bottom: 8px;">Android Development</li>
+          <li style="margin-bottom: 8px;">Cross-platform Apps</li>
+          <li style="margin-bottom: 8px;">App Maintenance</li>
+        </ul>
+        <button class="btn" onclick="showServiceDetails('mobile')">Learn More</button>
+      </div>
+      
+      <div class="card">
+        <h3>Translation Services</h3>
+        <p>Professional Tigrinya translation services for documents, websites, and applications.</p>
+        <ul style="margin-top: 15px; color: #ffffff;">
+          <li style="margin-bottom: 8px;">Document Translation</li>
+          <li style="margin-bottom: 8px;">Website Localization</li>
+          <li style="margin-bottom: 8px;">App Localization</li>
+          <li style="margin-bottom: 8px;">Cultural Adaptation</li>
+        </ul>
+        <button class="btn" onclick="showServiceDetails('translation')">Learn More</button>
+      </div>
+    </div>
+    
+    <div id="details-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Kidus Nega | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Service-specific modal functionality
+    function showServiceDetails(service) {
+      const modal = document.getElementById('details-modal');
+      const modalBody = document.getElementById('modal-body');
+      
+      const serviceDetails = {
+        'web': {
+          title: '🌐 Web Development Services',
+          content: `
+            <h3>Full-Stack Web Solutions</h3>
+            <ul>
+              <li><strong>Frontend Development:</strong> React.js, Vue.js, HTML5, CSS3</li>
+              <li><strong>Backend Development:</strong> Node.js, Python, PHP</li>
+              <li><strong>Database:</strong> MongoDB, MySQL, PostgreSQL</li>
+              <li><strong>E-commerce:</strong> Custom shopping carts, Payment integration</li>
+              <li><strong>CMS:</strong> WordPress, Custom CMS development</li>
+              <li><strong>Performance:</strong> Optimization, SEO, Speed improvements</li>
+            </ul>
+            <p>Creating modern, responsive websites that drive business growth and user engagement.</p>
+          `
+        },
+        'mobile': {
+          title: '📱 Mobile App Development',
+          content: `
+            <h3>Cross-Platform Mobile Solutions</h3>
+            <ul>
+              <li><strong>React Native:</strong> Cross-platform development</li>
+              <li><strong>iOS Development:</strong> Native Swift/Objective-C apps</li>
+              <li><strong>Android Development:</strong> Native Java/Kotlin apps</li>
+              <li><strong>Game Development:</strong> Unity, 2D/3D games</li>
+              <li><strong>Features:</strong> Push notifications, Offline functionality</li>
+              <li><strong>Publishing:</strong> App Store & Google Play deployment</li>
+            </ul>
+            <p>Building powerful mobile applications that work seamlessly across all devices and platforms.</p>
+          `
+        },
+        'translation': {
+          title: '🌍 Translation Services',
+          content: `
+            <h3>Professional Tigrinya Translation</h3>
+            <ul>
+              <li><strong>Document Translation:</strong> Legal, Medical, Technical documents</li>
+              <li><strong>Website Localization:</strong> Full website translation</li>
+              <li><strong>App Localization:</strong> Mobile app interface translation</li>
+              <li><strong>Cultural Adaptation:</strong> Context-aware translations</li>
+              <li><strong>Quality Assurance:</strong> Proofreading and editing</li>
+              <li><strong>Fast Delivery:</strong> Quick turnaround times</li>
+            </ul>
+            <p>Bridging language barriers with accurate, culturally-sensitive translations for global audiences.</p>
+          `
+        }
+      };
+      
+      modalBody.innerHTML = `
+        <h2>${serviceDetails[service].title}</h2>
+        ${serviceDetails[service].content}
+        <button class="btn" onclick="closeModal()">Close</button>
+      `;
+      
+      modal.style.display = 'block';
+      setTimeout(() => modal.classList.add('show'), 10);
+    }
+  </script>
+</body>
+</html> 

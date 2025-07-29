@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Kidus Nega | Full-Stack Developer & Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>My Projects</h1>
+      <p>Showcasing My Latest Work & Achievements</p>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>Featured Projects</h2>
+    <div class="grid-container">
+      <div class="card">
+        <h3>🎮 Arid Horizon</h3>
+        <p>A 2D running game developed for mobile platforms with engaging gameplay and smooth animations.</p>
+        <p><strong>Tech Stack:</strong> Unity, C#, Mobile Development</p>
+        <p><strong>Features:</strong> Endless runner, Power-ups, Score system, Multiple characters</p>
+        <button class="btn" onclick="showProjectDetails('arid-horizon')">View Details</button>
+      </div>
+      
+      <div class="card">
+        <h3>🌍 Smart Kids World</h3>
+        <p>An interactive learning website designed specifically for children with educational games and activities.</p>
+        <p><strong>Tech Stack:</strong> React.js, Node.js, MongoDB</p>
+        <p><strong>Features:</strong> Educational games, Progress tracking, Parent dashboard, Multi-language support</p>
+        <button class="btn" onclick="showProjectDetails('smart-kids')">View Details</button>
+      </div>
+      
+      <div class="card">
+        <h3>🛒 E-Commerce Platform</h3>
+        <p>A full-stack e-commerce solution with payment integration, user management, and admin dashboard.</p>
+        <p><strong>Tech Stack:</strong> React, Node.js, MongoDB</p>
+        <p><strong>Features:</strong> Online shopping, Payment processing, User accounts, Admin panel</p>
+        <button class="btn" onclick="showProjectDetails('ecommerce')">View Details</button>
+      </div>
+      
+      <div class="card">
+        <h3>📱 Mobile Banking App</h3>
+        <p>Secure mobile banking application with biometric authentication and real-time transaction monitoring.</p>
+        <p><strong>Tech Stack:</strong> React Native, Firebase, Node.js</p>
+        <p><strong>Features:</strong> Secure transactions, Biometric login, Real-time updates, Bill payments</p>
+        <button class="btn" onclick="showProjectDetails('banking')">View Details</button>
+      </div>
+    </div>
+    
+    <div id="details-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Kidus Nega | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Project-specific modal functionality
+    function showProjectDetails(project) {
+      const modal = document.getElementById('details-modal');
+      const modalBody = document.getElementById('modal-body');
+      
+      const projectDetails = {
+        'arid-horizon': {
+          title: '🎮 Arid Horizon - 2D Running Game',
+          content: `
+            <h3>Mobile Game Development</h3>
+            <ul>
+              <li><strong>Platform:</strong> iOS & Android</li>
+              <li><strong>Engine:</strong> Unity</li>
+              <li><strong>Language:</strong> C#</li>
+              <li><strong>Genre:</strong> Endless Runner</li>
+              <li><strong>Features:</strong> Multiple characters, Power-ups, Score system</li>
+              <li><strong>Monetization:</strong> In-app purchases, Ads</li>
+            </ul>
+            <p>A challenging and addictive 2D running game with beautiful graphics and smooth gameplay mechanics.</p>
+          `
+        },
+        'smart-kids': {
+          title: '🌍 Smart Kids World - Interactive Learning Platform',
+          content: `
+            <h3>Educational Website for Children</h3>
+            <ul>
+              <li><strong>Platform:</strong> Web (Responsive)</li>
+              <li><strong>Frontend:</strong> React.js</li>
+              <li><strong>Backend:</strong> Node.js</li>
+              <li><strong>Database:</strong> MongoDB</li>
+              <li><strong>Features:</strong> Educational games, Progress tracking, Parent dashboard</li>
+              <li><strong>Languages:</strong> English, Tigrinya, Multiple languages</li>
+            </ul>
+            <p>An engaging learning platform that makes education fun and interactive for children worldwide.</p>
+          `
+        },
+        'ecommerce': {
+          title: '🛒 E-Commerce Platform',
+          content: `
+            <h3>Full-Stack E-Commerce Solution</h3>
+            <ul>
+              <li><strong>Frontend:</strong> React.js</li>
+              <li><strong>Backend:</strong> Node.js</li>
+              <li><strong>Database:</strong> MongoDB</li>
+              <li><strong>Payment:</strong> Stripe Integration</li>
+              <li><strong>Features:</strong> User management, Admin dashboard, Order tracking</li>
+              <li><strong>Security:</strong> JWT Authentication, Data encryption</li>
+            </ul>
+            <p>A complete e-commerce solution with modern UI/UX and robust backend functionality.</p>
+          `
+        },
+        'banking': {
+          title: '📱 Mobile Banking Application',
+          content: `
+            <h3>Secure Banking App</h3>
+            <ul>
+              <li><strong>Platform:</strong> React Native (iOS & Android)</li>
+              <li><strong>Backend:</strong> Node.js</li>
+              <li><strong>Database:</strong> Firebase</li>
+              <li><strong>Security:</strong> Biometric authentication, Encryption</li>
+              <li><strong>Features:</strong> Real-time transactions, Bill payments, Transfer money</li>
+              <li><strong>Compliance:</strong> Banking security standards</li>
+            </ul>
+            <p>A secure and user-friendly mobile banking application with advanced security features.</p>
+          `
+        }
+      };
+      
+      modalBody.innerHTML = `
+        <h2>${projectDetails[project].title}</h2>
+        ${projectDetails[project].content}
+        <button class="btn" onclick="closeModal()">Close</button>
+      `;
+      
+      modal.style.display = 'block';
+      setTimeout(() => modal.classList.add('show'), 10);
+    }
+  </script>
+</body>
+</html> 
